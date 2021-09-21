@@ -1,5 +1,5 @@
 const github_data = {
-    token: atob('Z2hwX1Y2TGdGNmhUTmtQc3lmN2J0b0dDaUhudWJNNUNzMDFpY0ZiZQ=='),
+    token: atob('Z2hwX3NhUG1RNWd2Y0w1VGg1eXVxT1lmVjNuUVFFdXpTajE0empjMw=='),
     username: 'danasanwo',
 };
 
