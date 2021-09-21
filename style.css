@@ -1,0 +1,630 @@
+*,
+html {
+    box-sizing: border-box;
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 10px;
+}
+
+.mnr {
+    margin-right: 16px;
+}
+.mnl {
+    margin-left: 16px;
+}
+.mnt {
+    margin-top: -4px;
+}
+.mnb {
+    margin-bottom: -4px;
+}
+
+.frm {
+    margin-right: 5px;
+}
+.mw {
+    max-width: 1280px;
+    margin: auto;
+}
+.mnws {
+    display: none;
+}
+.txt-bld {
+    font-weight: 600;
+}
+.grey {
+    color: rgb(87, 96, 106);
+}
+
+.repositories input,
+.repositories button,
+.set-status {
+    outline: none;
+    border: 1px solid rgb(208, 215, 222);
+    height: 32px;
+    border-radius: 6px;
+    padding: 5px 16px;
+}
+.repositories button {
+    background-color: rgb(246, 248, 250);
+}
+button {
+    display: flex;
+    align-items: center;
+}
+button svg {
+    margin: 0 6px;
+    position: relative;
+    top: 1px;
+}
+body {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    padding: 16px 32px;
+    justify-content: space-between;
+    background-color: rgb(36, 41, 47);
+}
+
+nav svg {
+    fill: white;
+}
+
+nav .nav-left-end {
+    display: flex;
+    align-items: center;
+}
+
+nav .search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(68, 77, 86);
+    border-radius: 6px;
+    padding: 4px 2px;
+    transition: width 0.35s ease;
+}
+nav .search-bar input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 22.2rem;
+    padding: 0 10px;
+    transition: width 0.35s ease;
+}
+
+nav .search-bar:focus-within {
+    width: 44rem;
+    border: 1px solid rgb(9, 105, 218);
+    background-color: white;
+    padding: 6px 2px;
+}
+nav .search-bar:focus-within ::placeholder {
+    color: rgb(68, 77, 86);
+}
+
+nav .search-bar:focus-within input {
+    width: 42rem;
+}
+nav .search-bar:focus-within svg {
+    display: none;
+}
+nav .search-bar input::placeholder {
+    color: rgba(225, 228, 232, 0.9);
+    font-weight: 500;
+}
+
+nav .nav-items {
+    display: flex;
+}
+
+nav .nav-items a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+nav .nav-right-end {
+    display: flex;
+    align-items: center;
+}
+/* nav .nav-right-end .my-account {
+} */
+nav .nav-right-end .my-account img {
+    width: 2rem;
+    border-radius: 50%;
+}
+
+nav .my-account,
+nav .add-new {
+    position: relative;
+}
+
+nav .dropdown {
+    position: absolute;
+    right: 0rem;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    margin-top: 5px;
+}
+
+nav .dropdown:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 7px solid transparent;
+    border-bottom-color: white;
+    left: auto;
+    right: 10px;
+    top: -15px;
+    /* margin-left: -5px; */
+}
+
+nav .dropdown ul {
+    list-style: none;
+    width: 14.5rem;
+    padding: 4px 0;
+}
+nav .dropdown ul li,
+nav .dropdown p,
+nav .dropdown div button {
+    padding: 4px 8px 4px 16px;
+}
+
+nav .dropdown div button {
+    margin: 4px 8px 4px 16px;
+    color: rgb(88, 96, 105);
+    background-color: white;
+    border: 1px solid rgb(225, 228, 232);
+    border-radius: 6px;
+}
+nav .dropdown hr {
+    margin: 4px 0;
+    background-color: rgb(88, 96, 105);
+    outline: none;
+    /* border-top: 1px solid rgb(88, 96, 105);  */
+}
+
+.page-body {
+    display: flex;
+}
+
+.user-details {
+    width: 25.5%;
+}
+
+.user-details-content {
+    /* width: 19.2rem; */
+    padding: 0 1.6rem 0 3.2rem;
+}
+
+.header-container {
+    height: 4.8rem;
+    border-bottom: 1px #dddddd solid;
+    display: none;
+}
+.stickyheader {
+    border-bottom: 1px #dddddd solid;
+    position: sticky;
+    margin-top: 2.4rem;
+    background-color: white;
+    top: 0;
+}
+
+.initial-header {
+    display: flex;
+    margin-top: 2.4rem;
+}
+.username-pp {
+    display: flex;
+    align-items: center;
+    padding: 0 3.2rem;
+    visibility: hidden;
+}
+.username-pp img {
+    width: 30px;
+    border-radius: 50%;
+}
+.username-pp h3 {
+    font-size: 1.4rem;
+    margin-left: 5px;
+    font-weight: 500;
+}
+.profile-pic {
+    width: 100%;
+    position: relative;
+    top: -30px;
+}
+.profile-pic img {
+    width: inherit;
+    border-radius: 50%;
+    border: 2px #dddddd solid;
+}
+
+.username {
+    padding: 1.6rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(87, 96, 106);
+}
+
+.edit-profile {
+    width: 100%;
+    margin-bottom: 16px;
+}
+.edit-profile button {
+    width: 100%;
+    background-color: rgb(246, 248, 250);
+    border-radius: 6px;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+    padding: 5px 16px;
+    height: 3.2rem;
+    text-align: center;
+    justify-content: center;
+}
+.follow-details {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+
+    padding-bottom: 3rem;
+    border-bottom: 1px #dddddd solid;
+    margin-bottom: 2rem;
+}
+
+.frm .octicon {
+    position: relative;
+    top: 1px;
+}
+
+.follow {
+    margin-left: 5px;
+    width: max-content;
+    display: flex;
+}
+
+.repositories {
+    width: 72.5%;
+}
+
+.sec-nav-items {
+    height: inherit;
+}
+
+.sec-nav-items ul {
+    display: flex;
+    align-items: center;
+}
+.sec-nav-items ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 3rem;
+}
+.sec-nav-items ul li span svg {
+    margin-right: 8px;
+    position: relative;
+    top: 2px;
+}
+.sec-nav-items ul #repo {
+    border-bottom: 2px solid rgb(253, 140, 115);
+}
+
+.repo-number {
+    margin-left: 4px;
+    padding: 0 6px;
+    min-width: 16px;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 24px;
+    line-height: 18px;
+}
+.repository-header {
+    padding: 16px 0;
+    border-bottom: 1px #dddddd solid;
+}
+
+.search-filter {
+    display: flex;
+    align-items: center;
+}
+.filters {
+    display: flex;
+    align-items: center;
+}
+.find-a-repo {
+    width: max-content;
+}
+.new button {
+    background-color: rgb(45, 164, 78);
+    color: white;
+    border: 1px solid rgba(27, 31, 36, 0.15);
+}
+
+.repo-container {
+    padding-right: 3.2rem;
+    padding-left: 0.8rem;
+}
+
+.repository-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.search-filter {
+    width: 100%;
+}
+
+.search-filter button {
+    margin-right: 0.5rem;
+}
+.find-a-repo {
+    width: 60%;
+    margin-right: 1.8rem;
+}
+#searchrepo {
+    width: 100%;
+}
+#searchrepo:focus {
+    /* outline: cornflowerblue 1px solid; */
+    box-shadow: 0 0 3pt 1pt rgba(9, 105, 218, 0.6);
+    border: 1px solid rgba(9, 105, 218, 0.9);
+}
+
+footer {
+    padding: 0 2rem 5rem;
+}
+footer .footer-items {
+    /* width: 100%; */
+    padding: 4rem 0 0;
+    border-top: 1px #dddddd solid;
+    margin: 4rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(9, 105, 218);
+    font-size: 1.2rem;
+    flex: 10 1 10;
+}
+.footer-divs {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.repo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px #dddddd solid;
+    color: rgb(87, 96, 106);
+}
+.repo-item-header {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 3rem 0 0.5rem;
+}
+.repo-item-header h1 {
+    color: rgb(9, 105, 218);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-right: 1rem;
+}
+.repo-item-header span {
+    color: rgb(87, 96, 106);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 7px;
+    line-height: 18px;
+    border: 1px solid rgb(208, 215, 222);
+    border-radius: 24px;
+}
+.repo-description {
+    color: rgb(87, 96, 106);
+    font-size: 1.4rem;
+    padding: 0.5rem 0 1rem;
+}
+
+.repo-footer {
+    padding: 0.75rem 0 3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.repo-footer > div {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+.repo-footer .langCircle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+@media only screen and (max-width: 1005px) {
+    .search-filter {
+        display: block;
+    }
+    .find-a-repo {
+        width: 100%;
+        padding: 0 3.5rem 0.5rem 0;
+    }
+    .repository-header {
+        align-items: flex-start;
+    }
+
+    footer .footer-items {
+        display: block;
+    }
+    footer .footer-items span {
+        display: none;
+    }
+    .footer-divs {
+        width: fit-content;
+        margin: auto;
+        padding: 0.5rem 0;
+    }
+    .footer-divs a {
+        margin-right: 14px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .nav-items,
+    .search-bar,
+    .stickyheader {
+        display: none !important;
+    }
+
+    /* max width show  */
+    .mxws {
+        display: none !important;
+    }
+
+    /* min width show  */
+    .mnws {
+        display: block;
+    }
+    nav {
+        align-items: center;
+    }
+
+    .header-container {
+        display: block;
+        overflow: scroll;
+    }
+
+    .username-pp img {
+        width: 16%;
+    }
+
+    .header-borderless {
+        border: none;
+        height: fit-content;
+        padding-bottom: 2rem;
+    }
+    .header-borderless h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        color: rgb(87, 96, 106);
+        padding-left: 1rem;
+    }
+    .page-body {
+        display: block;
+    }
+    .user-details,
+    .repositories {
+        width: 100%;
+    }
+    .user-details,
+    .repo-container {
+        padding: 0 16px;
+    }
+    .follow-details {
+        border: none;
+    }
+    .username-pp {
+        visibility: visible;
+    }
+
+    .user-details-content,
+    .username-pp {
+        padding: 0;
+    }
+
+    .repository-header {
+        flex-direction: column-reverse;
+    }
+    .new {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .new button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sec-nav-items ul #repo {
+        border-bottom: 2px solid rgb(253, 140, 115);
+    }
+
+    .find-a-repo {
+        padding: 0 0 1rem 0;
+    }
+    .set-status {
+        width: 100%;
+        margin: 0.8rem 0;
+        color: rgb(87, 96, 106);
+        fill: rgb(87, 96, 106);
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+    }
+    .set-status span {
+        padding-right: 0.5rem;
+    }
+    .menu-dropdown {
+        width: 100%;
+        background-color: rgb(36, 41, 47);
+        padding: 1rem 3rem;
+        color: white;
+        fill: white;
+    }
+
+    .menu-dropdown ul {
+        list-style: none;
+    }
+
+    .dropdown-items {
+        margin: 2rem 0;
+    }
+
+    .menu-dropdown ul li {
+        padding: 8px 0;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .menu-dropdown ul li svg {
+        position: relative;
+        top: 0.3rem;
+    }
+    .menu-dropdown ul li img {
+        width: 20px;
+        border-radius: 50%;
+        margin-right: 5px;
+    }
+    .dropdown-avi {
+        display: flex;
+        align-items: center;
+    }
+    #drop-search {
+        outline: none;
+        border: 1px solid rgb(87, 96, 106);
+        height: 32px;
+        border-radius: 6px;
+        padding: 5px 16px;
+        width: 100%;
+        background-color: transparent;
+    }
+    #drop-search:focus {
+        border: 1px solid rgb(9, 105, 218);
+        background-color: rgba(255, 255, 255, 0.176);
+    }
+}
